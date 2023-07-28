@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Header/>
+    <Notes :notes="notes"/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+import Header from './components/Header.vue';
+import Notes from './components/Notes.vue';
+  export default {
+    components: {
+      Header,
+      Notes
+    },
+    data(){
+      return {
+        notes: [
+          {
+            id: 1,
+            title: 'Vue',
+            date: '07.03.2022',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'
+          },
+          {
+            id: 2,
+            title: 'React',
+            date: '15.08.2000',
+            desc: 'Lorem ipsum dolor sit amet'
+          },
+          {
+            id: 3,
+            title: 'Angular',
+            date: '08.07.1981',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'
+          },
+        ],
+      }
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
