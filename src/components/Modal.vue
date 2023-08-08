@@ -28,7 +28,7 @@
         props:{
             currentId: Number,
             edit: Boolean,
-            editNote: Object
+            editNote: Object,
         },
         data(){
             return {
