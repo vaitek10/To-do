@@ -8,7 +8,7 @@
     :notes="filterNotes"
     @delNote="delNote"
     @changeNote="changeNote"
-    lang="lang"
+    :lang="lang"
     />
     <Modal 
     @closeModal="closeModal" 
